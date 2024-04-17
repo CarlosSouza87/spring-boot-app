@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.yaml.snakeyaml.events.Event.ID;
 
 import br.gov.sp.fatec.springbootapp.Repository.TrabalhoRepository;
 import br.gov.sp.fatec.springbootapp.entity.Trabalho;
@@ -20,5 +21,17 @@ public class TrabalhoService {
 
         
     }
+    public List<Trabalho> listaTrabalhoTodos(){
+        return trabalhoRepository.findAll();
+    }
+    public Trabalho buscaTrabalhoPorId(Long id){
+        return trabalhoRepository.findById(id).orElseThrow();
+
+    }
+    public Trabalho cadastraTrabalho(Trabalho trabalho){
+        return trabalhoRepository.save(trabalho);
+        
+    }
+      
 
 }
