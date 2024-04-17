@@ -18,8 +18,6 @@ public class TrabalhoService {
     public List<Trabalho> buscaTrabalhoPorTituloNota(String titulo,Integer nota){
         
         return trabalhoRepository.findByTituloAndNotaGreaterThan(titulo,nota);
-
-        
     }
     public List<Trabalho> listaTrabalhoTodos(){
         return trabalhoRepository.findAll();

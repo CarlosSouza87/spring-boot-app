@@ -34,13 +34,11 @@ public class TrabalhoController {
     }
 
     @GetMapping(value="/{id}")
-    public ResponseEntity<Trabalho> listaIdTrabalho(@PathVariable("id")Long id)                                     ){
+    public ResponseEntity<Trabalho> listaIdTrabalho(@PathVariable("id")Long id){                                     ){
         Trabalho trabalho=trabalhoService.buscaTrabalhoPorId(id);
 
         return ResponseEntity.ok().body(trabalho);
-
-
-
+    
     }
 
     @GetMapping
