@@ -1,6 +1,5 @@
 package br.gov.sp.fatec.springbootapp.entity;
 
-import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,32 +9,26 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tra_trabalho")
+@Table(name = "cor_corpo")
 
 
 public class Trabalho {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "tra_id")
+    @Column(name = "cor_id")
     private Long id;
 
-    @Column(name = "tra_titulo")
+    @Column(name = "cor_nome")
     private String titulo;
 
-    @Column(name = "tra_data_hora_entrega")
-    private LocalDateTime datahoraentrega;
-
-    @Column(name = "tra_descricao")
+    @Column(name = "cor_descricao")
     private String descricao;
 
-    @Column(name = "tra_grupo")
-    private String grupo;
-
-    @Column(name = "tra_nota")
+    @Column(name = "cor_diametro")
     private Integer  nota;
 
-    @Column(name = "tra_justificativa")
-    private String justificativa;
+    @Column(name = "cor_distancia_estrela")
+    private Float justificativa;
 
     public Long getId() {
         return id;
@@ -53,14 +46,6 @@ public class Trabalho {
         this.titulo = titulo;
     }
 
-    public LocalDateTime getDatahoraentrega() {
-        return datahoraentrega;
-    }
-
-    public void setDatahoraentrega(LocalDateTime datahoraentrega) {
-        this.datahoraentrega = datahoraentrega;
-    }
-
     public String getDescricao() {
         return descricao;
     }
@@ -69,14 +54,7 @@ public class Trabalho {
         this.descricao = descricao;
     }
 
-    public String getGrupo() {
-        return grupo;
-    }
-
-    public void setGrupo(String grupo) {
-        this.grupo = grupo;
-    }
-
+   
     public Integer getNota() {
         return nota;
     }
@@ -85,15 +63,12 @@ public class Trabalho {
         this.nota = nota;
     }
 
-    public String getJustificativa() {
+    public Float getJustificativa() {
         return justificativa;
     }
 
-    public void setJustificativa(String justificativa) {
+    public void setJustificativa(Float justificativa) {
         this.justificativa = justificativa;
     }
     
-
-
-
 }
