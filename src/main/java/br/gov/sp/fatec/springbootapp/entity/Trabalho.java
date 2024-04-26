@@ -12,7 +12,6 @@ import javax.persistence.Table;
 
 @Table("cor_corpo")
 
-
 public class Trabalho {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
