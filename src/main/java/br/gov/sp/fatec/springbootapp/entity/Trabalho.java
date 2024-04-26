@@ -9,7 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "cor_corpo")
+
+@Table("cor_corpo")
 
 
 public class Trabalho {
